@@ -1,0 +1,61 @@
+{
+  "name": "escape-frontend",
+  "description": "Secure connection application",
+  "author": "Your Name <your.email@example.com>", 
+  "private": true,
+  "version": "0.0.0",
+  "type": "commonjs",
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "package:mac": "electron-builder --mac --x64 --dir",
+    "build:mac": "electron-builder --mac --x64",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "electron": "electron . --no-sandbox"
+  },
+  "dependencies": {
+    "axios": "^1.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
+    "tailwindcss": "^3.3.3",
+    "zustand": "^4.4.1"
+  },
+  "build": {
+    "appId": "com.escape.app",
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": ["dmg", "zip"],
+      "icon": "build/icon.icns"
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-typescript": "^7.27.0",
+    "@babel/preset-typescript": "^7.27.0",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.15",
+    "electron": "^26.1.0",
+    "electron-builder": "^26.0.12",
+    "postcss": "^8.4.27",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-electron": "^0.11.2"
+  }
+}
