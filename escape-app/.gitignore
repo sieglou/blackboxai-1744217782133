@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+target/
+Cargo.lock
+
+# Build artifacts
+dist/
+dist-electron/
+*.dmg
+*.zip
+*.app
+
+# Environment files
+.env
+.env.local
+.env*.local
+
+# Logs and databases
+*.log
+*.sqlite
+*.sqlite3
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Rust build files
+/target/
+**/*.rs.bk
+
+# Electron and frontend
+out/
+release/
+app.asar
